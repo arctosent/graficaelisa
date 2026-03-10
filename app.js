@@ -12,6 +12,9 @@ const productName = document.querySelector("#productName");
 const productSize = document.querySelector("#productSize");
 const clearAllBtn = document.querySelector("#clearAll");
 const downloadBtn = document.querySelector("#downloadLayout");
+const mobileNotice = document.querySelector("#mobileNotice");
+const continueMobileBtn = document.querySelector("#continueMobile");
+const editorSection = document.querySelector(".editor-section");
 
 const MAX_W = 560;
 const MAX_H = 480;
@@ -409,6 +412,28 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 revealItems.forEach((item) => observer.observe(item));
+
+let mobileOverride = false;
+
+function updateMobileState() {
+  if (!mobileNotice || !editorSection) return;
+  const isMobile = window.innerWidth <= 900;
+  if (isMobile && !mobileOverride) {
+    mobileNotice.classList.remove("hidden");
+    editorSection.classList.add("editor-locked");
+  } else {
+    mobileNotice.classList.add("hidden");
+    editorSection.classList.remove("editor-locked");
+  }
+}
+
+continueMobileBtn?.addEventListener("click", () => {
+  mobileOverride = true;
+  updateMobileState();
+});
+
+window.addEventListener("resize", updateMobileState);
+updateMobileState();
 
 async function downloadLayout() {
   if (!window.html2canvas || !window.UTIF) {

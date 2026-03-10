@@ -528,6 +528,29 @@ button {
   background: #fff;
 }
 
+.mobile-warning {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: #fff3e0;
+  border: 1px solid #f7caa2;
+  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  color: #6b3a2a;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-warning.hidden {
+  display: none;
+}
+
+.editor-locked .editor-shell {
+  opacity: 0.6;
+  pointer-events: none;
+  filter: grayscale(0.2);
+}
+
 .site-footer {
   padding: 3rem 6vw;
   background: #1b2b33;
