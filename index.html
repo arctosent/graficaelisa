@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gráfica Elisa | Personalize, imprima e receba</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Manrope:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/utif@3.1.0/UTIF.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <div class="bg-blobs"></div>
+
+    <header class="site-header">
+      <div class="brand">
+        <img class="logo logo-main" src="imagem/logo.png" alt="Gráfica Elisa" />
+      </div>
+      <nav class="site-nav">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#loja">Loja</a>
+        <a href="#editor">Editor</a>
+        <a href="#contato">Contato</a>
+        <a href="login.html">Login</a>
+      </nav>
+      <a class="primary-btn" href="login.html">Começar agora</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Mais qualidade na sua impressão!!!</p>
+          <h1>Crie seu cartão, folder ou flyer em minutos.</h1>
+          <p class="lead">
+            Escolha: faça o layout você mesmo no nosso editor online ou venha até a gráfica para criarmos juntos.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#editor">Abrir editor</a>
+            <a class="ghost-btn" href="#contato">Falar com a equipe</a>
+          </div>
+          <div class="hero-note">
+            <span>Prazo rápido</span>
+            <span>Provas digitais</span>
+            <span>Acabamento premium</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="mock-card">
+            <div class="mock-top"></div>
+            <div class="mock-body">
+              <p>Seu design aqui</p>
+              <span>Cartão 90 x 50 mm</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="section reveal">
+        <h2>Como funciona</h2>
+        <div class="steps">
+          <article>
+            <h3>1. Escolha o produto</h3>
+            <p>Cartões, flyers, folders, banners e muito mais com medidas prontas.</p>
+          </article>
+          <article>
+            <h3>2. Faça o layout</h3>
+            <p>Use nosso editor com camadas ou peça para nossa equipe criar para você.</p>
+          </article>
+          <article>
+            <h3>3. Imprima e receba</h3>
+            <p>Produção rápida com acabamento profissional e retirada ou entrega.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section highlight reveal" id="caminhos">
+        <h2>Dois caminhos, a mesma qualidade</h2>
+        <div class="choice-grid">
+          <article>
+            <h3>Eu faço o layout</h3>
+            <p>Use o editor online, adicione camadas, imagens e textos. Finalize quando estiver pronto.</p>
+            <a class="primary-btn small" href="#editor">Abrir editor</a>
+          </article>
+          <article>
+            <h3>Quero ajuda na gráfica</h3>
+            <p>Agende uma visita. Nossa equipe cria o layout com você e orienta o melhor acabamento.</p>
+            <a class="ghost-btn small" href="#contato">Agendar atendimento</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="loja" class="section reveal">
+        <div class="section-head">
+          <div>
+            <h2>Loja virtual</h2>
+            <p>Escolha um produto para abrir no editor e já começar o layout.</p>
+          </div>
+          <span class="badge">Preços sob consulta</span>
+        </div>
+        <div class="product-grid">
+          <button class="product-card" data-label="Cartão de visita" data-w="90" data-h="50">
+            <h3>Cartão de visita</h3>
+            <p>90 x 50 mm</p>
+            <span>Acabamento fosco ou brilho</span>
+          </button>
+          <button class="product-card" data-label="Flyer A5" data-w="148" data-h="210">
+            <h3>Flyer A5</h3>
+            <p>148 x 210 mm</p>
+            <span>Ideal para divulgação rápida</span>
+          </button>
+          <button class="product-card" data-label="Folder A4" data-w="210" data-h="297">
+            <h3>Folder A4</h3>
+            <p>210 x 297 mm</p>
+            <span>Dobras personalizadas</span>
+          </button>
+          <button class="product-card" data-label="Convite 15x20" data-w="150" data-h="200">
+            <h3>Convite</h3>
+            <p>150 x 200 mm</p>
+            <span>Papéis especiais</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="editor" class="section editor-section reveal">
+        <div class="section-head">
+          <div>
+            <h2>Editor com camadas</h2>
+            <p>Monte seu layout com liberdade. Camadas, alinhamento e área de segurança.</p>
+          </div>
+          <div class="color-warning">
+            <strong>Atenção:</strong> as cores exibidas no monitor podem variar em relação ao impresso.
+          </div>
+        </div>
+
+        <div class="editor-shell">
+          <div class="editor-panel tools">
+            <h3>Ferramentas</h3>
+            <button id="addText" class="panel-btn">Adicionar texto</button>
+            <button id="addShape" class="panel-btn">Adicionar forma</button>
+            <label class="panel-btn file-btn">
+              <input type="file" id="addImage" accept="image/*" />
+              Adicionar imagem
+            </label>
+
+            <div class="panel-group">
+              <label for="colorPicker">Cor da camada</label>
+              <input type="color" id="colorPicker" value="#1b4d56" />
+            </div>
+            <div class="panel-group">
+              <label for="fontSize">Tamanho da fonte</label>
+              <input type="range" id="fontSize" min="10" max="80" value="24" />
+            </div>
+            <div class="panel-group">
+              <label for="opacityRange">Transparência</label>
+              <input type="range" id="opacityRange" min="10" max="100" value="100" />
+            </div>
+
+            <div class="panel-actions">
+              <button id="duplicateLayer" class="ghost-btn small">Duplicar camada</button>
+              <button id="deleteLayer" class="ghost-btn small">Excluir camada</button>
+            </div>
+          </div>
+
+          <div class="artboard-wrap">
+            <div class="artboard-meta">
+              <div>
+                Produto selecionado:
+                <strong id="productName">Cartão de visita</strong>
+              </div>
+              <div>
+                Tamanho:
+                <strong id="productSize">90 x 50 mm</strong>
+              </div>
+            </div>
+
+            <div id="artboard" class="artboard" role="application" aria-label="Editor de layout">
+              <div class="bleed-box"></div>
+              <div class="safe-box"></div>
+            </div>
+
+            <div class="artboard-actions">
+              <a
+                class="primary-btn small"
+                id="sendQuote"
+                href="mailto:contato@graficaelisa.com.br?subject=Orcamento%20Grafica%20Elisa"
+              >Enviar para orçamento</a>
+              <button class="ghost-btn small" id="downloadLayout">Baixar TIFF</button>
+              <button class="ghost-btn small" id="clearAll">Limpar tudo</button>
+            </div>
+          </div>
+
+          <div class="editor-panel layers">
+            <h3>Camadas</h3>
+            <ul id="layersList" class="layers-list"></ul>
+            <p class="layers-hint">Arraste e reordene com os botões para organizar as camadas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cores" class="section note-section reveal">
+        <h2>Sobre variação de cores</h2>
+        <div class="note-grid">
+          <article>
+            <h3>Telas x impressão</h3>
+            <p>Monitores usam luz (RGB) e a impressão usa pigmentos (CMYK). Isso pode gerar diferenças.</p>
+          </article>
+          <article>
+            <h3>Prova digital</h3>
+            <p>Enviamos uma prova antes da produção. Se precisar, faça prova impressa na gráfica.</p>
+          </article>
+          <article>
+            <h3>Papéis e acabamentos</h3>
+            <p>O tipo de papel, laminação e brilho alteram a percepção da cor final.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="faq">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq-grid">
+          <article>
+            <h3>Posso criar no site e finalizar na gráfica?</h3>
+            <p>Sim. Você pode começar o layout aqui e concluir com nossa equipe na gráfica.</p>
+          </article>
+          <article>
+            <h3>Vocês ajustam meu arquivo?</h3>
+            <p>Fazemos ajustes básicos e avisamos sobre sangria, margens e resolução.</p>
+          </article>
+          <article>
+            <h3>Quais formatos aceitam?</h3>
+            <p>PDF, PNG e JPG em alta resolução. Outras necessidades podem ser combinadas.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contato" class="site-footer">
+      <div>
+        <img class="footer-logo" src="imagem/logo.png" alt="Gráfica Elisa" />
+        <p>Av. Rui Barbosa, 1369 - Centro, Rondonópolis - MT</p>
+        <p>Seg a Qui: 8h às 18h | Sex: 08h às 17h</p>
+      </div>
+      <div>
+        <p><strong>WhatsApp:</strong> (66) 99986-8045</p>
+        <p><strong>Telefone:</strong> (66) 3421-5002</p>
+        <p><strong>Email:</strong> graficaelisa@gmail.com</p>
+      </div>
+      <div class="footer-cta">
+        <a
+          class="primary-btn"
+          href="mailto:graficaelisa@gmail.com?subject=Orcamento%20Grafica%20Elisa"
+        >Solicitar orçamento</a>
+      </div>
+    </footer>
+  </body>
+</html>
